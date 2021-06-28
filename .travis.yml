@@ -1,0 +1,25 @@
+language: node_js
+cache: 
+  directories:
+    - node_modules
+     - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  -yarn test
+notifications:
+  email:
+    recipients:
+      - danilo@comono.co
+    on_success: always
+    on_failure: always
+deploy:
+  provider: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: b22ba23f-72c4-4319-8dbc-2bf48973bdb2
+  app: platzi-store-backend-0
+  on:
+    repo: darmo1/platzi-store-backend
