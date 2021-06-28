@@ -19,7 +19,7 @@ deploy:
   provider: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: d0999860-371c-4243-95bd-a6b1c412e0ee
+  # api_key: 
   app: platzi-store-backend-0
   on:
     repo: darmo1/platzi-store-backend
